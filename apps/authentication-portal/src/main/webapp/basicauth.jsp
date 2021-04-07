@@ -417,7 +417,7 @@
                 String urlParameters) {
 
             return identityMgtEndpointContext + ACCOUNT_RECOVERY_ENDPOINT_REGISTER + "?"
-                    + urlParameters + "&callback=" + Encode.forHtmlAttribute(urlEncodedURL);
+                    + Encode.forJavaScript(Encode.forUri(urlParameters)) + "&callback=" + Encode.forHtmlAttribute(urlEncodedURL);
         }
 
     %>
